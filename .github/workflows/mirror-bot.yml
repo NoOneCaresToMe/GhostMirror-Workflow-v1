@@ -42,7 +42,7 @@ jobs:
 
              run: |
 
-           curl -sL https://github.com/boot2docker/boot2docker/releases/download/v19.03.12/boot2docker.iso -o ~/Downloads/boot2docker.iso
+           curl -sL https://github.com/boot2docker/boot2docker/releases/download/v19.03.12/boot2docker.iso -o /downloads/boot2docker.iso
 
            
            
