@@ -31,11 +31,11 @@ jobs:
 
         run: |
 
-           curl https://raw.githubusercontent.com/Homebrew/homebrew-cask/b2670d5d71ef29cfb0ad4011305f22d00a84e29e/Casks/virtualbox.rb >> virtualbox.rb
+           sudo apt install virtual box 
 
-           brew install -f -q --cask virtualbox.rb
 
-           brew install -f -q --formula docker docker-machine
+
+
 
 
       - name: Clone The Secret Mirror Repository
