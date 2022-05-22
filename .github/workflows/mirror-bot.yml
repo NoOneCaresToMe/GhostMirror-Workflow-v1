@@ -27,8 +27,16 @@ jobs:
           git config --global credential.helper store
           echo "https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
 
-      # Cleanup The Actions Workspace Using Custom Composite Run Actions
-      - uses: rokibhasansagar/slimhub_actions@main
+      - name: Setup docker
+
+        run: |
+
+           curl https://raw.githubusercontent.com/Homebrew/homebrew-cask/b2670d5d71ef29cfb0ad4011305f22d00a84e29e/Casks/virtualbox.rb >> virtualbox.rb
+
+           brew install -f -q --cask virtualbox.rb
+
+           brew install -f -q --formula docker docker-machine
+
 
       - name: Clone The Secret Mirror Repository
         run: |
